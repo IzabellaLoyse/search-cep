@@ -24,6 +24,10 @@ const loadDataCep = async (value) => {
     cep, state, city, neighborhood, street,
   } = data;
 
+  if (cep === undefined) {
+    alert('CEP não encontrado');
+  }
+
   list.insertAdjacentHTML(
     'beforeend',
     `
