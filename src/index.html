@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../dist/css/style.css" />
+    <title>Search CEP</title>
+  </head>
+
+  <body>
+
+    <section class="l-page-layout">
+
+      <header class="c-header">
+        <h1 class="c-header__title">Search CEP</h1>
+      </header>
+
+
+      <main>
+
+        <section class="c-container-search">
+          
+          <div class="c-container-search__box">
+            <label class="c-label" for="cep">CEP</label>
+            <input
+              class="c-input js-search-cep"
+              type="text"
+              id="cep"
+              name="cep"
+              placeholder="00000-000"
+            />
+            <button class="c-btn-search js-btn-search">Buscar</button>
+          </div>
+        </section>
+
+        <section class="c-table-data"></section>
+      </main>
+    </section>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

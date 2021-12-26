@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+/*------VENDOR------*/
+
+@import './vendor/Normalize/Normalize';
+
+/*------ABSTRACTS------*/
+
+@import './abstracts/Variables';
+
+/*------BASE------*/
+
+@import './base/Reset';
+
+/*------COMPONENTS------*/
+
+@import './components/Header/Header';
+@import './components/ContainerSearch/ContainerSearch';
+@import './components/TableList/TableList';
+
+/*------LAYOUT------*/
+
+@import './layout/PageLayout';

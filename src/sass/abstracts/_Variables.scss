@@ -1,0 +1,19 @@
+/*------ COLOR PALETTE -----*/
+
+$theme-colors: (
+  'primary-color': rgb(243, 240, 36),
+  'secondary-color': rgb(18, 17, 17),
+  'tertiary-color': rgb(255, 255, 255),
+  'quaternary-color': rgb(38, 179, 245),
+  'shadow': rgba(0, 0, 0, 0.2),
+);
+
+/* ----- TYPOGRAPHY ----- */
+
+$righteous-font-family: 'Righteous', cursive;
+$staatliches-font-family: 'Staatliches', cursive;
+
+/*----- MEASURES -----*/
+
+$global-border-radius: 6px;
+$global-letter-spacing: 0.156em;

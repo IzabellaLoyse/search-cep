@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline-offset: 0.25rem;
+}
+
+body {
+  font-family: $staatliches-font-family;
+  height: 100%;
+  line-height: 1.6em;
+}
+
+label {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,33 @@
+.c-table-data {
+  height: auto;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.c-list {
+  border: 2px solid map-get($theme-colors, 'secondary-color');
+  width: 100%;
+}
+
+.c-list__item {
+  border-bottom: 1px solid map-get($theme-colors, 'secondary-color');
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: calc(100% - 2rem);
+
+  &:first-child {
+    padding-top: 1rem;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.c-list__item-list {
+  &:last-child {
+    color: map-get($theme-colors, 'quaternary-color');
+    letter-spacing: 0.1rem;
+  }
+}
