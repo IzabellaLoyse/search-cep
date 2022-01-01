@@ -18,17 +18,18 @@ const clearInputSearch = () => {
 const loadDataCep = async (value) => {
   const list = document.querySelector('.c-table-data');
 
-  const data = await getDataApi(value);
+  try {
+    const data = await getDataApi(value);
 
-  const {
-    cep, state, city, neighborhood, street,
-  } = data;
+    const {
+      cep, state, city, neighborhood, street,
+    } = data;
 
-  if (cep === undefined) return alert('CEP não encontrado');
+    if (cep === undefined) return alert('CEP não encontrado');
 
-  return list.insertAdjacentHTML(
-    'beforeend',
-    `
+    return list.insertAdjacentHTML(
+      'beforeend',
+      `
   <ul class="c-list">
   <li class="c-list__item">
     <span class="c-list__item-list">CEP:</span>
@@ -55,7 +56,10 @@ const loadDataCep = async (value) => {
   </li>
 </ul>
   `,
-  );
+    );
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const inputValidationSearchCep = () => {
