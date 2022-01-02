@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const getDataApi = async (cepNumber) => {
   try {
     const response = await fetch(
@@ -25,7 +26,13 @@ const loadDataCep = async (value) => {
       cep, state, city, neighborhood, street,
     } = data;
 
-    if (cep === undefined) return alert('CEP não encontrado');
+    if (cep === undefined) {
+      return Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'CEP não encontrado!',
+      });
+    }
 
     return list.insertAdjacentHTML(
       'beforeend',
@@ -69,7 +76,11 @@ const inputValidationSearchCep = () => {
   const regex = /^[0-9]{8}$/;
 
   if (!regex.test(cep)) {
-    alert('Informe um CEP válido');
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...Algo deu errado!',
+      text: 'Informe um CEP válido!',
+    });
   } else {
     loadDataCep(cep);
   }
